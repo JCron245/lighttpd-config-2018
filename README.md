@@ -1,12 +1,16 @@
 ## Server options should be set outside of host conditionals
+```
 server.port = 80
 server.username = "http"
 server.groupname = "http"
 server.errorlog = "/var/log/lighttpd/error.log"
+```
 ## Servers document-root should have a global default but also be set for each host
+```
 server.document-root = "/var/www/default/dist"
+```
 
-
+```
 $HTTP["host"] =~ "(^|\.)example1\.com$" {
 server.document-root    = "/var/www/example1/dist"
 dir-listing.activate    = "enable"
@@ -39,3 +43,4 @@ mimetype.assign         = (
                                 "" => "application/octet-stream"
                         )
 }
+```
