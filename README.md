@@ -14,35 +14,35 @@ server.document-root = "/var/www/default/dist"
 
 
 $HTTP["host"] =~ "(^|\.)example1\.com$" {
-server.document-root    = "/var/www/example1/dist"
-dir-listing.activate    = "enable"
-index-file.names        = ( "index.html" )
-mimetype.assign         = (
-                                ".html" => "text/html",
-                                ".txt" => "text/plain",
-                                ".css" => "text/css",
-                                ".js" => "application/x-javascript",
-                                ".jpg" => "image/jpeg",
-                                ".jpeg" => "image/jpeg",
-                                ".gif" => "image/gif",
-                                ".png" => "image/png",
-                                "" => "application/octet-stream"
-                        )
+	server.document-root	= "/var/www/example1/dist"
+	dir-listing.activate  = "enable"
+	index-file.names      = ( "index.html" )
+	mimetype.assign       = (
+				".html" => "text/html",
+				".txt" => "text/plain",
+				".css" => "text/css",
+				".js" => "application/x-javascript",
+				".jpg" => "image/jpeg",
+				".jpeg" => "image/jpeg",
+				".gif" => "image/gif",
+				".png" => "image/png",
+				"" => "application/octet-stream"
+				)
 }
 $HTTP["host"] =~ "(^|\.)example2\.com$" {
-server.document-root    = "/var/www/example2/dist"
-dir-listing.activate    = "enable"
-index-file.names        = ( "index.html" )
-mimetype.assign         = (
-                                ".html" => "text/html",
-                                ".txt" => "text/plain",
-                                ".css" => "text/css",
-                                ".js" => "application/x-javascript",
-                                ".jpg" => "image/jpeg",
-                                ".jpeg" => "image/jpeg",
-                                ".gif" => "image/gif",
-                                ".png" => "image/png",
-                                "" => "application/octet-stream"
-                        )
+	server.document-root  = "/var/www/example2/dist"
+	dir-listing.activate  = "enable"
+	index-file.names      = ( "index.html" )
+	mimetype.assign       = (
+				".html" => "text/html",
+				".txt" => "text/plain",
+				".css" => "text/css",
+				".js" => "application/x-javascript",
+				".jpg" => "image/jpeg",
+				".jpeg" => "image/jpeg",
+				".gif" => "image/gif",
+				".png" => "image/png",
+				"" => "application/octet-stream"
+				)
 }
 ```
